@@ -1,0 +1,23 @@
+{
+  // 컴파일 되는 자바스크립트의 버전 설정
+  // ESNext는 자바스크립트 최신버전을 의미
+  "compilerOptions": {
+    // 타입 정의 파일의 타입 검사를 생략하는 옵션
+    "skipLibCheck": true,
+    "target": "ESNext",
+    // 가져오기, 내보내기 방식
+    "module": "ESNext",
+    // 자바스크립트 파일을 dist파일에 모아두기
+    "outDir": "dist",
+    // 타입스크립트를 더 엄격하게 검사(true시)
+    "strict": false,
+    // 동일한 이름의 변수를 똑같은 스코프에 나오는데 이걸 설정
+    "moduleDetection": "force"
+  },
+  // ts-node의 옵션을 설정하면 ts-node로 타입스크립트 모듈을 실행
+  "ts-node": {
+    "esm": true
+  },
+  // src파일 안에 모든 타입스크립트 파일을 한번에 컴파일
+  "include": ["src"]
+}
